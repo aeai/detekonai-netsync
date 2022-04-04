@@ -1,0 +1,20 @@
+{
+    "name": "Detekonai.Networking.NetSync.Injector.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bb31e52f2cf360e42884db9688e51748",
+        "GUID:b5043656734769a4dbaa07627306cfd3",
+        "GUID:2faec8fb0be03604293ae09d14b4b779"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

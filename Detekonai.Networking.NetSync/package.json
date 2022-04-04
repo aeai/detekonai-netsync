@@ -1,0 +1,19 @@
+{
+  "name": "com.detekonai.networking.netsync",
+  "version": "0.0.1",
+  "displayName": "Detekonai NetSync",
+  "description": "Syncronize objects beetween machines",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "dependencies":
+  {
+  },
+ "keywords": [
+    "Networking",
+	"Detekonai"
+  ],
+  "author": {
+    "name": "aeai",
+    "email": "aeai@detekonai.com"
+  }
+}

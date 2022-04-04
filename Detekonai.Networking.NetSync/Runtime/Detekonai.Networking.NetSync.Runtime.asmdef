@@ -1,0 +1,16 @@
+{
+    "name": "Detekonai.Networking.NetSync.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bb31e52f2cf360e42884db9688e51748"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

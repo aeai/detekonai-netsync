@@ -1,0 +1,21 @@
+{
+  "name": "com.detekonai.networking.netsync.injector",
+  "version": "0.0.1",
+  "displayName": "Detekonai NetSync Injector",
+  "description": "Injector for NetSync",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "dependencies":
+  {
+	"com.unity.nuget.mono-cecil":"1.10.2",
+	"com.detekonai.networking.netsync":"0.0.1"
+  },
+ "keywords": [
+    "Networking",
+	"Detekonai"
+  ],
+  "author": {
+    "name": "aeai",
+    "email": "aeai@detekonai.com"
+  }
+}
