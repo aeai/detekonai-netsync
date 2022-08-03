@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <Version>0.0.1</Version>
+	  <Version>0.0.2</Version>
 	  <Company>Detekonai</Company>
 	  <Authors>Aeai</Authors>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -20,7 +20,7 @@
   </ItemGroup>
 
 	<ItemGroup Condition=" '$(Configuration)' != 'MasterDebug' ">
-		<PackageReference Include="Detekonai.Networking.NetSync" Version="0.0.1" />
+		<PackageReference Include="Detekonai.Networking.NetSync" Version="0.0.2" />
 	</ItemGroup>
 
 	<ItemGroup Condition=" '$(Configuration)' == 'MasterDebug' ">

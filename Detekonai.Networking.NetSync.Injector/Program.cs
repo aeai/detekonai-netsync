@@ -17,6 +17,11 @@ namespace Detekonai.Networking.NetSync.Injector
 
             }
 
+            public void Log(object sender, string msg, Exception ex, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int sourceLineNumber = 0)
+            {
+                Log(sender, ex.Message + "\n" + ex.StackTrace.ToString(), ILogConnector.LogLevel.Error, memberName, sourceFilePath, sourceLineNumber);
+            }
+
             public void Log(object sender, string msg, ILogConnector.LogLevel level = ILogConnector.LogLevel.Verbose, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int sourceLineNumber = 0)
             {
                 string stringLevel = null;
