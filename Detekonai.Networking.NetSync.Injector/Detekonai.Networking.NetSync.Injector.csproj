@@ -20,7 +20,7 @@
   </ItemGroup>
 
 	<ItemGroup Condition=" '$(Configuration)' != 'MasterDebug' ">
-		<PackageReference Include="Detekonai.Networking.NetSync" Version="0.0.2" />
+		<PackageReference Include="Detekonai.Networking.NetSync" Version="0.0.3" />
 	</ItemGroup>
 
 	<ItemGroup Condition=" '$(Configuration)' == 'MasterDebug' ">

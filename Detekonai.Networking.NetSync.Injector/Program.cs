@@ -8,7 +8,7 @@ namespace Detekonai.Networking.NetSync.Injector
     class Program
     {
 
-        class ConsoleLogger : ILogConnector
+        class ConsoleLogger : ILogger
         {
             public bool Verbose { get; set; } = true;
 
@@ -19,17 +19,17 @@ namespace Detekonai.Networking.NetSync.Injector
 
             public void Log(object sender, string msg, Exception ex, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int sourceLineNumber = 0)
             {
-                Log(sender, ex.Message + "\n" + ex.StackTrace.ToString(), ILogConnector.LogLevel.Error, memberName, sourceFilePath, sourceLineNumber);
+                Log(sender, ex.Message + "\n" + ex.StackTrace.ToString(), ILogger.LogLevel.Error, memberName, sourceFilePath, sourceLineNumber);
             }
 
-            public void Log(object sender, string msg, ILogConnector.LogLevel level = ILogConnector.LogLevel.Verbose, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int sourceLineNumber = 0)
+            public void Log(object sender, string msg, ILogger.LogLevel level = ILogger.LogLevel.Verbose, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int sourceLineNumber = 0)
             {
                 string stringLevel = null;
-                if(level == ILogConnector.LogLevel.Error)
+                if(level == ILogger.LogLevel.Error)
                 {
                     stringLevel = "error";
                 }
-                else if (level == ILogConnector.LogLevel.Warning)
+                else if (level == ILogger.LogLevel.Warning)
                 {
                     stringLevel = "warning";
                 }
@@ -56,7 +56,7 @@ namespace Detekonai.Networking.NetSync.Injector
                 logger.Log(null, $"NetSyncInjector: includeDir: {includeDir}");
                 if (args.Length >= 3)
                 {
-                    logger.Log(null, "NETSYNC001 : NetSyncInjector Verbose logging is on", ILogConnector.LogLevel.Warning);
+                    logger.Log(null, "NETSYNC001 : NetSyncInjector Verbose logging is on", ILogger.LogLevel.Warning);
                     logger.Verbose = string.Equals(args[2], "true", StringComparison.OrdinalIgnoreCase);
                 }
                 NetSyncInjector injector = new NetSyncInjector(logger);
@@ -70,7 +70,7 @@ namespace Detekonai.Networking.NetSync.Injector
                         < Output TaskParameter = ""ConsoleOutput"" PropertyName = ""OutputOfExec"" />
                     </ Exec >
                 </ Target > ";
-                logger.Log(null, $"NETSYNCERR : NetSyncInjector missing arguments! Check build log for details!", ILogConnector.LogLevel.Error);
+                logger.Log(null, $"NETSYNCERR : NetSyncInjector missing arguments! Check build log for details!", ILogger.LogLevel.Error);
                 logger.Log(null, $"Add this to the target project .csproj file: {help}");
             }
 

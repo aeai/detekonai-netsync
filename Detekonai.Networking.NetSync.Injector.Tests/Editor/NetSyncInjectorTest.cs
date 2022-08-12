@@ -126,7 +126,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_property_works_with_value_type()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
 
@@ -139,7 +139,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_property_dont_break_without_valid_interceptor()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
 
             Assert.DoesNotThrow(() => testObject.IntValue = 5);
         }
@@ -148,7 +148,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_function_dont_break_without_valid_interceptor()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
 
             Assert.DoesNotThrow(() => testObject.DoStuffWithOneParam(5));
         }
@@ -157,7 +157,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Injector_respect_class_alias()
         {
             BadNameSyncObject testObject = new BadNameSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
 
@@ -170,7 +170,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_property_works_with_explicit_setters()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
 
@@ -184,7 +184,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_property_works_with_explicit_complex_setters()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
 
@@ -201,7 +201,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_property_works_with_reference_type()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
             var newValue = new AwsomeReferenceObject() { AThing = "bla" };
@@ -215,7 +215,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Injector_ignores_properties_marked_with_ignore()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
            
@@ -228,7 +228,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_marked_parameterless_function_works()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
 
@@ -242,7 +242,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_marked_function_with_return_value_works()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
 
@@ -256,7 +256,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_marked_one_param_function_works()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
 
@@ -270,7 +270,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_marked_multi_param_function_works()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
 
@@ -284,7 +284,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Inject_to_marked_complex_function_works()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
 
@@ -298,7 +298,7 @@ namespace Detekonai.Networking.NetSync.Injector.Tests.Editor
         public void Injector_properly_use_method_alias()
         {
             TestNetSyncObject testObject = new TestNetSyncObject();
-            var logger = Substitute.For<ILogConnector>();
+            var logger = Substitute.For<ILogger>();
             INetworkInterceptor interceptor = Substitute.For<INetworkInterceptor>();
             testObject.NetSyncInterceptor = interceptor;
 

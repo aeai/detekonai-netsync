@@ -53,10 +53,10 @@ namespace Detekonai.Networking.NetSync.Injector.Editor
         private readonly MethodDefinition callInterceptor;
         private readonly string thisLocation;
         private readonly string interceptorLocation;
-        private readonly ILogConnector logger;
+        private readonly ILogger logger;
         private readonly TypeReference netSyncAttribute;
         private readonly TypeReference netSyncIgnoreAttribute;
-        public NetSyncInjector(ILogConnector logger)
+        public NetSyncInjector(ILogger logger)
         {
             this.logger = logger;
             thisLocation = Assembly.GetAssembly(typeof(NetSyncInjector)).Location;
