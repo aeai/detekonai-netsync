@@ -1,6 +1,6 @@
 {
   "name": "com.detekonai.networking.netsync",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "displayName": "Detekonai NetSync",
   "description": "Syncronize objects beetween machines",
   "unity": "2019.1",
